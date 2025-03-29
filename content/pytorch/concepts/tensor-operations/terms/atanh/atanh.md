@@ -12,24 +12,27 @@ CatalogContent:
   - 'intro-to-py-torch-and-neural-networks'
   - 'paths/data-science'
 ---
-The **.atanh()** function in PyTorch stands for inverse hyperbolic tangent. It calculates the inverse hyperbolic tangent for each value in a [tensor](https://www.codecademy.com/resources/docs/pytorch/tensors).
+
+The **`.atanh()`** function in PyTorch calculates the inverse hyperbolic tangent for each value in a [tensor](https://www.codecademy.com/resources/docs/pytorch/tensors).
 
 ## Syntax
 
 ```pseudo
-torch.atanh(input)
+torch.atanh(input, *, out=None)
 ```
 
-## Parameters
+**Parameters:**
 
-- `input (Tensor)`: A tensor with values between (-1, 1) (excluding -1 and 1).
+- `input` (Tensor): A tensor containing values strictly between -1 and 1 (exclusive).
+- `out` (Tensor, optional): The output tensor to store the result. If not provided, a new tensor is created.
 
-## Returns
+**Return Value:**
 
-- A new tensor where each value is the inverse hyperbolic tangent of value in the `input`
-
+Returns a new tensor where each value is the inverse hyperbolic tangent of the corresponding value in `input`.
 
 ## Example
+
+The following example demonstrates the usage of the `.atanh()` function:
 
 ```py
 import torch
@@ -44,8 +47,8 @@ y = torch.atanh(x)
 print(y)
 ```
 
-The calculation in the example returns:
+The above code produces the following output:
 
 ```shell
-tensor ([ 0.5493, 0.3143, 0,0000])
+tensor([ 0.5493, -0.3095,  0.0000])
 ```
